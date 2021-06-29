@@ -1,0 +1,125 @@
+.container::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+.container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  background-color: #000;
+  color: #fff;
+  scrollbar-width: none;  /* firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#logo {
+  float: left;
+  text-align: center;
+  margin: 20px 0 0 30px;
+}
+.menu {
+  scroll-snap-align: start;
+  float: right;
+  background-color: #000;
+  color: #fff;
+}
+.el-menu, .el-menu-item, .el-menu-item:hover, .el-menu-item.is-active {
+  font-size: 16px;
+  background-color: #000 !important;
+  color: #fff !important;
+  border-bottom: none !important;
+  margin-top: 7px;
+  margin-right: 7px;
+}
+.el-menu-item.is-active {
+  font-weight: bolder;
+  border-bottom: none;
+}
+.main{
+  scroll-snap-type: y mandatory;
+  background-color: #000;
+  color: #fff;
+  scrollbar-width: none;  /* firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.page {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  font-size: calc(var(--font-size) * 1px);
+  font-weight: bold;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  scroll-behavior: smooth;
+  text-align: center;
+  flex-direction: column;
+}
+.content {
+  width: 100vw;
+}
+.title {
+  font-family: Stanley;
+  color: #fff;
+  font-size: 145px;
+  font-weight: 500;
+  margin: 30vh 0 2vh 0;
+}
+.title-sub {
+  font-family: Open Sans;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 50vh;
+}
+.artwrok{
+  margin: 40vh 0 50vh 0;
+}
+.question {
+  font-family: Stanley;
+  color: #fff;
+  font-size: 75px;
+  font-weight: 500;
+  margin: 60vh 0 60vh 0;
+}
+.welcome {
+  margin: 50vh 0 50vh 0
+}
+.sub-title {
+  font-family: Stanley;
+  color: #fff;
+  font-size: 53px;
+  font-weight: 500;
+  margin: 30vh 0 2vh 0;
+}
+.text {
+  font-family: Open Sans;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 8vh;
+}
+.art-title{
+  font-family: Stanley;
+  color: #fff;
+  font-size: 55px;
+  font-weight: 500;
+  margin: 8vh 0 2vh 0;
+}
+.description {
+  font-family: Open Sans;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+}
+.backgroundimg {
+  width: 80vw;
+  /* background-image: url(""); */
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
