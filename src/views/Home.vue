@@ -4,7 +4,9 @@
     <Welcome @start="startVisit"/>
     <div id="exhibition" ref="exhibition" class="hidden">
       <iframe src="/background.html" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <Future/>
+      <Present/>
+      <Past/>
       <Start id="start"/>
     </div>
   </div>
@@ -19,16 +21,18 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import Header from '@/components/Header.vue'
 import Start from '@/components/Start.vue'
 import Welcome from '@/components/Welcome.vue'
+import Past from '@/components/Past.vue'
+import Present from '@/components/Present.vue'
+import Future from '@/components/Future.vue'
 
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld, Header, Welcome, Start
+    Header, Welcome, Start, Past, Present, Future
   },
   methods: {
     startVisit: function () {
