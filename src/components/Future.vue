@@ -11,7 +11,13 @@
         </div>
         <!-- artwork5 -->
         <div class="artwork" id="gallery">
-          <div id="gallery-bg"></div>
+          <div id="gallery-box">
+            <ul>
+              <li v-for="item in list" :key="item.value">
+                <img v-bind:src="item.src" :alt="item.des">
+              </li>
+            </ul>
+          </div>
           <div class="art-title">Oracle</div>
           <div class="description">You are presented with a series of examples of how humanity<br>imagines the future evolutions of technology.<br>How do you think the future is gonna look like? Which version of the<br>future do you think is going to come true? Is there yet another<br>different version we haven’t shown you?</div>
         </div>
@@ -24,12 +30,21 @@
         </div>
       </div>
     </div>
-    <iframe src="/background.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
+    <iframe src="/bg_future.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      list: [
+        { value: "a",
+          src: "b",
+          des: "c"}
+      ]
+    }
+  },
   methods: {
     scrollToBottom() {
       var content = this.$el.querySelector('#containerC')
@@ -71,6 +86,19 @@ export default {
     background-position 60% 50%
     background-repeat: no-repeat;
     margin-top 25vh
+
+  #gallery-box ul
+    display flex
+    flex-wrap wrap
+    position absolute
+    top 1rem
+  #gallery-box li
+    list-style none
+    margin 1rem
+    border 1px solid #eee
+  #gallery-box img
+    width 10rem
+    height 7rem
 
   #gallery-bg
     height 75vh

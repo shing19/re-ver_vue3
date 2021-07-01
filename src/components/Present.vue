@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <iframe src="/background.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
+    <iframe src="/bg_present.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
   </div>
 </template>
 

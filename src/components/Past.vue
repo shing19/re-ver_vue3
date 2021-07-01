@@ -39,7 +39,7 @@
           <div class="question" id="connect">Do you remember<br>what you looked like?</div>
         </div>
       </div>
-    <iframe src="/background.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
+    <iframe src="/bg_past.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
     </div>
   </div>
 </template>
