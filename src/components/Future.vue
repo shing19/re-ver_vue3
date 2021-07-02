@@ -11,12 +11,12 @@
         </div>
         <!-- artwork5 -->
         <div class="artwork" id="gallery">
-          <div id="gallery-box">
-            <ul>
-              <li v-for="item in list" :key="item.value">
-                <img v-bind:src="item.src" :alt="item.des">
-              </li>
-            </ul>
+          <!-- demo -->
+          <!-- <div class="gallery-bg" id="gallery-bg"></div> -->
+          <div class="gallery-box">
+              <div class="img-box" v-for="img in imgs" :key="img">
+                <img :src="getPath(img)" v-bind:alt="img">
+            </div>
           </div>
           <div class="art-title">Oracle</div>
           <div class="description">You are presented with a series of examples of how humanity<br>imagines the future evolutions of technology.<br>How do you think the future is gonna look like? Which version of the<br>future do you think is going to come true? Is there yet another<br>different version we haven’t shown you?</div>
@@ -38,21 +38,34 @@
 export default {
   data () {
     return {
-      list: [
-        { value: "a",
-          src: "b",
-          des: "c"}
-      ]
+      imgs: []
     }
   },
+  created () {
+    this.getImg()
+  },
   methods: {
-    scrollToBottom() {
+    scrollToBottom () {
       var content = this.$el.querySelector('#containerC')
       content.scrollTop = content.scrollHeight
       // console.log(content.scrollHeight)
+    },
+    getImg () {
+      const imgs = require.context("../assets/clips", false, /\.gif$/)
+      const imgsKey = imgs.keys()
+      for (let i=0; i<imgsKey.length; i++) {
+        const imgName = imgsKey[i].substring(2, imgsKey[i].length)
+        this.imgs.push(imgName)
+        console.log(imgName)
+      }
+      // console.log(imgs)
+    },
+    getPath (imgName) {
+      return require("../assets/clips/" + imgName)
     }
   }
 }
+
 </script>
 
 
@@ -87,18 +100,20 @@ export default {
     background-repeat: no-repeat;
     margin-top 25vh
 
-  #gallery-box ul
+  .gallery-box
+    margin 0 20rem 0 20rem
     display flex
     flex-wrap wrap
-    position absolute
-    top 1rem
-  #gallery-box li
-    list-style none
-    margin 1rem
-    border 1px solid #eee
-  #gallery-box img
-    width 10rem
-    height 7rem
+    align-items center
+    justify-content center
+
+  .gallery-box img
+    width 9rem
+    height 5rem
+    margin 0.3rem
+    border 3px black
+    border-radius 5px
+    filter drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.4))
 
   #gallery-bg
     height 75vh
