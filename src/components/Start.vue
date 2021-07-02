@@ -1,8 +1,12 @@
 <template>
   <div class="main">
     <div class="content" @click="$emit('enter')">
-      <img src="../assets/arrowup.svg" alt="" id="arrowup">
-      <div class="text">Scroll you way up</div>
+      <el-button id="intro-button">
+        <img src="../assets/arrowup.svg" alt="" id="arrowup">
+        <div class="text">Scroll you way up</div>  
+      </el-button>
+      <!-- <img src="../assets/arrowup.svg" alt="" id="arrowup">
+      <div class="text">Scroll you way up</div> -->
       <div class="sub-title">Welcome to the past</div>
       <div class="text" id="intro">Here is where your journey begins,<br>you’re now in the depts of your concoiusness and will be guided<br>through a journey throught time to climb back to the present and<br>then get a glimpse of the future.<br>Scroll up to move forward with your experience.</div>
     </div>    
@@ -17,10 +21,22 @@
     width 24px
     margin 18vh 0 5px 0
   .sub-title
-    margin 10vh 0 18px 0
+    margin 0 0 18px 0
   #intro
     bottom 0
     margin-bottom 35vh
+
+  #intro-button
+    // margin-bottom 10vh
+    color white
+    background-color rgba(0,0,0,0)
+    border-color rgba(0,0,0,0)
+    font-family Open Sans
+    font-size 28px
+    font-weight 100
+    text-align center
+    line-height 60px
+    margin-bottom -5vh
   
   .content
     position relative

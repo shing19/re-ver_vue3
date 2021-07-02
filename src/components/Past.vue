@@ -14,7 +14,9 @@
           <div class="question">What have influenced<br>your journey the most?</div>
           <!-- artwork2 -->
           <div class="artwork" id="art2">
-            <div id="notepad"></div>
+            <div id="notepad">
+              <iframe id="drawspace" src="https://editor.p5js.org/shing19/embed/TdWho1Xed"></iframe>
+            </div>
             <div class="art-title" id="art2-title">Doodle</div>
             <div class="text">Back in our childhood, scribbling things was a way to give free room to<br>creativity. Sitting in front of an empty paper with some pens in order to<br>start expressing fantasy and imagination.<br><br>Try your best to draw an elephant by memory.<br>Don’t worry if the shape isn’t perfect, we’ll help you finish it.</div>
           </div>
@@ -39,7 +41,7 @@
           <div class="question" id="connect">Do you remember<br>what you looked like?</div>
         </div>
       </div>
-    <iframe src="/bg_past.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
+    <iframe id="bg" src="/bg_past.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
     </div>
   </div>
 </template>
@@ -72,6 +74,13 @@ export default {
     background-size contain
     background-position center
     background-repeat no-repeat
+  #drawspace
+    width 68%
+    border 0
+    position relative
+    top 5.5rem
+    left 5rem
+    margin 0
   #art1
     width 100vw
     display flex
@@ -132,7 +141,7 @@ export default {
     position relative
     z-index 2
     bottom 0
-  iframe
+  #bg
     height 100vh
     position absolute
     bottom 0
