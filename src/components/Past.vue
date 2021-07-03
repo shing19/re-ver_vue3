@@ -6,6 +6,7 @@
           <!-- artwork3 -->
           <div class="artwork" id="art3">
             <div id="memory">
+              <iframe src="art3.html" frameborder="0"></iframe>
             </div>
             <div class="art-title" id="art3-title">Portal
             </div>
