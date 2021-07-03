@@ -5,8 +5,9 @@
         <div class="content" id="content" ref="content">
           <!-- artwork3 -->
           <div class="artwork" id="art3">
-            <div id="memory"></div>
-            <div class="art-title" id="art3-title" @click="scroll">Portal
+            <div id="memory">
+            </div>
+            <div class="art-title" id="art3-title">Portal
             </div>
             <div class="text">Some people and memories connected to them are more blurry<br>and harder to remember than others, therefore the past gets mixed<br>with imagination and the results are brand new memories. Are you<br>sure that what you remember happened for real?</div>
           </div>

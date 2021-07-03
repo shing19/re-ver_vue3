@@ -6,17 +6,7 @@
         <!-- artwork4 -->
         <div class="artwork" id="art4">
           <div id="music">
-            <div id="music-bg"></div>
-            <el-row>
-              <el-col :span="8" :offset="8">
-                <el-input
-                  type="textarea"
-                  :rows="2"
-                  placeholder="请输入内容">
-                </el-input>
-                <el-button class="button">Submit</el-button>
-              </el-col>
-            </el-row>
+            <iframe id="musicplayer" src="https://rever-artwork4.glitch.me/" frameborder="0"></iframe>
           </div>
           <div class="art-title">Sinestesia</div>
           <div class="description">How are you feeling right now? Are you anxious? Excited? Maybe a bit of both?<br>Sometimes it’s hard to convey to others exactly how we feel and whats in our minds,<br>but visualization of our emotions might help give a more defined shape to abstracts<br> features and help us express them to others.</div>
@@ -28,7 +18,7 @@
         </div>
       </div>
     </div>
-    <iframe src="/bg_present.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
+    <iframe id="bg" src="/bg_present.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe>
   </div>
 </template>
 
@@ -71,6 +61,12 @@ export default {
   .button
     margin 5vh 0 0 0
 
+  #musicplayer
+    width 48vw
+    height 65vh
+    border-radius 10px
+    filter drop-shadow(3px 3px 20px rgba(169,140,219,0.4))
+
   #welcome
     margin 60vh 0 45vh 0
 
@@ -84,7 +80,7 @@ export default {
     position relative
     z-index 2
     bottom 0
-  iframe
+  #bg
     height 100vh
     position absolute
     bottom 0
