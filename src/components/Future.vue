@@ -15,7 +15,7 @@
           <!-- <div class="gallery-bg" id="gallery-bg"></div> -->
           <div class="gallery-box">
               <div class="img-box" v-for="img in imgs" :key="img">
-                <img :src="getPath(img)" v-bind:alt="img">
+                <img v-lazy:src="getPath(img)" v-bind:alt="img">
             </div>
           </div>
           <div class="art-title">Oracle</div>
