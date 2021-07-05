@@ -6,10 +6,6 @@
           <!-- artwork3 -->
           <div class="artwork" id="art3">
             <div id="memory">
-              <!-- <frameset rows="*, 4000">
-                <frame src=body.htm noresize=yes frameborder=0 marginheight=0 marginwidth=0 scrolling="no" />
-                <frame src="art3/index.html" noresize=yes frameborder=0 marginheight=0 marginwidth=0 scrolling="no" />
-              </frameset> -->
               <iframe id="memoryscroll" ref="memoryscroll" src="art3/index.html" scrolling="auto" frameborder="0" allowtransparency="true" onload="this.contentWindow.document.documentElement.scrollTop=4000"></iframe>
             </div>
             <div class="art-title" id="art3-title">Portal
