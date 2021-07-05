@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                background-color: rgba(0,0,0,0);
+            }
+            canvas {
+                padding:    0;
+                margin:     0px, 0px, 0px, 0px;, ;
+                position: relative;
+                filter: hue-rotate(235deg) contrast(150%) saturate(120%) brightness(2);
+                z-index: 0;
+            }
+            img {
+                padding:    0px;
+                margin: 0px, 0px, 0px, 0px; 
+                width: 645px;
+                height: 550;
+                position: absolute;
+                z-index: 1;
+            }
+            .button{
+                background-color: rgba(0,0,0,0);
+                border-radius:28px;
+                /* border: 2px; */
+                border-color: white;
+                display:inline-block;
+                cursor:pointer;
+                color: white;
+                font-family:Arial;
+                font-size:14px;
+                padding:16px 31px;
+                text-decoration:none;
+            }
+
+            .button:disabled, button[disabled]{
+                border: 1px solid #999999;
+                background-color: #cccccc;
+                color: #666666;
+            }
+            .button2{
+                background-color:rgba(0,0,0,0);
+                border-radius:28px;
+                /* border: 2px; */
+                border-color: white;
+                display:inline-block;
+                cursor:pointer;
+                color: white;
+                font-family:Arial;
+                font-size:14px;
+                padding:16px 51px;
+                text-decoration:none;
+            }
+
+            .button2:disabled, button[disabled]{
+                border: 1px solid #999999;
+                background-color: #cccccc;
+                color: #666666;
+            }
+        </style>
+
+        <!-- lots of imports for TensorFlow and the Face Landmarks model -->
+        <script src="https://unpkg.com/@tensorflow/tfjs-core@2.4.0/dist/tf-core.js"></script>
+        <script src="https://unpkg.com/@tensorflow/tfjs-converter@2.4.0/dist/tf-converter.js"></script>
+        <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.4.0/dist/tf-backend-webgl.js"></script>
+        <script src="https://unpkg.com/@tensorflow-models/face-landmarks-detection@0.0.1/dist/face-landmarks-detection.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+        <script src="sketch.js"></script>
+    </head>
+    <body>
+    <div class="canvas">
+        <img class="img" src="Mirror.png">
+    </div>
+    <button disabled class="button" id="link" onclick="downloadc()" style="position:absolute; top: 530px;left: 330px;">DOWNLOAD</button>
+    <button disabled class="button2" id="startBtn" style="position:absolute;top: 530px;left: 170px;">START</button>
+</body>
+</html>
+
