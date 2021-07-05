@@ -5,6 +5,7 @@
     <div id="exhibition" ref="exhibition" class="hidden">
       <div class="stage" id="future"><Future ref="future" @stop="stopVisit"/></div>
       <div class="stage" id="present"><Present ref="present"/></div>
+      <!-- <div class="stage" id="transition"><Transition ref="transition"/></div> -->
       <div class="stage" id="past"><Past ref="past"/></div>
       <div class="stage"><Start id="start" @enter="enterExhi"/></div>
       <!-- <iframe src="/background.html" frameborder="0" width="100vw" height="100vh" scrolling="auto"></iframe> -->
@@ -41,6 +42,7 @@ import Welcome from '@/components/Welcome.vue'
 import Past from '@/components/Past.vue'
 import Present from '@/components/Present.vue'
 import Future from '@/components/Future.vue'
+// import Transition from '@/components/Transition.vue'
 
 
 export default {

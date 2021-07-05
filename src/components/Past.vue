@@ -6,7 +6,11 @@
           <!-- artwork3 -->
           <div class="artwork" id="art3">
             <div id="memory">
-              <iframe src="art3.html" frameborder="0"></iframe>
+              <!-- <frameset rows="*, 4000">
+                <frame src=body.htm noresize=yes frameborder=0 marginheight=0 marginwidth=0 scrolling="no" />
+                <frame src="art3/index.html" noresize=yes frameborder=0 marginheight=0 marginwidth=0 scrolling="no" />
+              </frameset> -->
+              <iframe id="memoryscroll" ref="memoryscroll" src="art3/index.html" scrolling="auto" frameborder="0" allowtransparency="true" onload="this.contentWindow.document.documentElement.scrollTop=4000"></iframe>
             </div>
             <div class="art-title" id="art3-title">Portal
             </div>
@@ -54,6 +58,13 @@ export default {
     scrollToBottom() {
       var content = this.$el.querySelector('#containerC')
       content.scrollTop = content.scrollHeight
+      // document.querySelector('#memoryscroll').scrollTop = 3200
+      // console.log("memory scroll = "+ document.querySelector('#memoryscroll').scrollHeight )
+      var myIframe = this.$refs.memoryscroll
+      // myIframe.onload = function () {
+        myIframe.contentWindow.document.documentElement.scrollTo(0, 4000)
+        console.log("scroll height is "+myIframe.contentWindow.scrollHeight)
+      // }
     }
   }
 }
@@ -62,12 +73,21 @@ export default {
 <style lang="stylus" scoped>
   @import '../style.css'
 
+  // #memory
+  //   height 120vh
+  //   background-image url('../assets/memory.png')
+  //   background-size 100vw
+  //   background-position top
+  //   background-repeat no-repeat
+
+
+  
   #memory
-    height 120vh
-    background-image url('../assets/memory.png')
-    background-size 100vw
-    background-position top
-    background-repeat no-repeat
+    width 100vw
+    color white
+
+  #memoryscroll
+    width 100vw
 
   #notepad
     width 100vw
